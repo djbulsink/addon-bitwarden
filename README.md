@@ -129,6 +129,10 @@ especially if running with limited resources.
 
 To set the limit, you can use this setting: 10MB would be `10485760`.
 
+### Option: `signup_allowed`
+
+By default users can register. If you want to change that set the `signup_allowed` option to `false`.
+
 ## Known issues and limitations
 
 - This add-on cannot support Ingress at this time due to technical limitations
