@@ -34,6 +34,7 @@
     "ssl": "bool",
     "certfile": "str",
     "keyfile": "str",
-    "request_size_limit": "int?"
+    "request_size_limit": "int?",
+    "signup_allowed": "bool"
   }
 }

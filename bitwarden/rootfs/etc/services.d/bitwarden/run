@@ -80,6 +80,11 @@ if bashio::config.true 'ssl'; then
     export ROCKET_TLS="{certs=\"/ssl/${certfile}\",key=\"/ssl/${keyfile}\"}"
 fi
 
+# Disable registration of new users
+if bashio::config.has_value 'signup_allowed'; then
+    export SIGNUPS_ALLOWED=$(bashio::config 'signup_allowed')
+fi
+
 # Run the Bitwarden server
 bashio::log.info 'Starting the Bitwarden RS server...'
 cd /opt || bashio::exit.nok
